@@ -1,0 +1,63 @@
+<!--"Treasure Quest: Boxed In" implies that players are on a quest to find treasure hidden 
+    within one of many boxes. The term "boxed in" suggests that the treasure is concealed
+    within a confined space, adding an element of challenge and mystery to the game. 
+    Players must use their wit and intuition to guess the correct box containing the 
+    treasure, adding an exciting and suspenseful aspect to the gameplay.-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <title>Document</title>
+</head>
+<body class="first media_first">
+    <div id = "front-page">
+    <h1>Treasure Quest: Boxed In</h1>
+    <div class="sound-settings"><p class="heading">SOUND SETTINGS</p>       
+<br>
+        <label for="volumeControl">Volume Control</label>
+    <input type="range" class="volumeControl" min="0" max="1" step="0.01" value="1">
+    </div>
+</div>
+    <div class="front-container">
+        <div id="first-name">
+            <label for="name">NAME</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+        </div>
+        <div id="nick-name">
+            <label for="nickname">NICKNAME </label>
+            <input type="text" id="nickname" name="name" placeholder="Enter your nickname" required>
+        </div>
+        <div>
+        <button class="instruction_button" onclick="openPopup()">Click Me</button>
+        <div id="popupContainer">
+        <div id="popupContent">
+            <h2>Instructions</h2>
+            <p><p class= "welcome">Welcome to the Treasure Quest...!!</p><br>
+            <ul>
+                <li>You will be given a chance to click one out of all boxes.</li>
+                <li>Each box is having a survival and a danger in it.</li>
+                <li>Choosing survival will lead you to next level and increase your points.</li>
+                <li>Caught by danger will lead you to the end of the game.</li>
+                <li>At the end you will reach to the treasure which will give you maximum points.</li>
+                <li>Lets test your luck with just single click.Good Luck....!!</li>
+            </ul></p>
+            <button class="play_button"onclick="game_page()">Let's Play</button>
+        </div>
+        </div>
+        </div>
+    </div>
+    <audio id="background-audio" autoplay loop>
+        <source src="music_effects/bg-music.mp3" type="audio/mpeg">
+    </audio>
+    <audio id="mouse-click">
+        <source src="music_effects/mouse-click.wav" type="audio/mpeg">
+    </audio>
+    <audio id="key-press">
+        <source src="music_effects/keyboard.wav" type="audio/mpeg">
+    </audio>
+<script src="index.js"></script>
+
+</body>
+</html>

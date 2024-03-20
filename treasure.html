@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="treasure_style.css" rel="stylesheet"/>
+    <title>Document</title>
+</head>
+<body>
+    
+        
+            <div class="treasure_content">
+                <img class="treasure-box1" src="assets/treasure_page_output.png"/>
+                <img class="treasure-box2" src="assets/treasure_page_output.png"/>
+            </div>
+
+            <!-- treasure Box -->
+<div id="popup_chest_treasure">
+    <div id = "popup_treasure_content">
+        <p class="text_effect4"> YOU WERE ALMOST THERE...!!<br>Don't lose heart! Restart and give it another shot...!!</p>
+       <a href="score.html" class="try-again"> SHOW SCORE </a>
+    </div>
+</div> 
+<div id="popup_chest_treasure1">
+    <div id = "popup_treasure_content1">
+        <p class="text_effect5"> Congratulations! You've got the treasure and earned <br><span class="thousand">2000 </span>points! </p>
+       <button class="final_score" onclick="final_score(); addPoints(2000)">FINAL SCORE</button>
+    </div>
+</div>   
+<audio id="background-audio" autoplay loop>
+ <source src="music_effects/bg-music.mp3" type="audio/mpeg">
+</audio>
+<audio id="mouse-click">
+ <source src="music_effects/mouse-click.wav" type="audio/mpeg">
+</audio>
+<audio id="key-press">
+ <source src="music_effects/keyboard.wav" type="audio/mpeg">
+</audio>
+
+
+<script src="treasure.js"></script>
+</body>
+</html>

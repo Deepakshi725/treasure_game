@@ -1,0 +1,284 @@
+/*-----------------Treasure box level 2-------------------------*/
+
+*{
+    margin: 0;
+    font-family: 'Mighty-Souly';
+}
+@font-face {
+    font-family: 'Mighty-Souly';
+    src: url('fonts/MightySouly-lxggD.ttf') format('woff2');
+}
+
+body{
+    background-color: rgb(0, 0, 0);
+}
+.treasure_content{
+    display: flex;
+    justify-content: center;
+    padding: 10%;
+    border: 1px solid;
+   
+}
+
+
+
+  .treasure-box1{
+    height:500px;
+    width:500px;
+  }
+ .treasure-box1:hover{
+    transform: scale(1.1);
+}
+  .treasure-box2{
+    height:500px;
+    width:500px;
+  }
+  .treasure-box2:hover{
+    transform: scale(1.1);
+}
+  #popup_chest_treasure{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999; 
+}
+
+#popup_treasure_content{
+    position: absolute;
+    width: 90%;
+    height: 80%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("assets/treasure_empty.jpg");
+    background-size: cover;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding: 40px;    
+    }
+
+@keyframes zoomInOut {
+    0% {
+    font-size: 4em;
+    }
+    50% {
+        font-size: 5.5em;
+    }
+    100% {
+        font-size: 4em;
+    }
+}
+
+.text_effect4 {
+    font-size: 5rem;
+    text-align: center;
+    padding-top:8%;
+    padding-left: 15%;
+    color:#040404e4;
+    animation: zoomInOut 2s infinite alternate;
+}
+
+.try-again {
+  margin: 12px;
+  height: 50px;
+  width: 120px;
+  border-radius: 10px;
+  background: #333;
+  justify-content: center;
+  align-items: center;
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+  inset -5px -5px 10px #222;
+  font-family: "Damion", cursive;
+  cursor: pointer;
+  border: none;
+  font-size: 16px;
+  color: rgb(161, 161, 161);
+  transition: 500ms;
+}
+
+.try-again:hover {
+  box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+    inset -5px -5px 10px #444;
+  color: #d6d6d6;
+  transition: 500ms;
+}
+
+
+#popup_chest_treasure1{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent black background */
+    z-index: 999; 
+}
+
+#popup_treasure_content1{
+    position: absolute;
+    width: 60%;
+    height: 60%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("assets/win_bg.jpg");
+    background-size: cover;
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    justify-content: space-between;
+    padding-left: 30px;
+    padding: 40px;    
+    }
+
+@keyframes zoomInOut2 {
+    0% {
+    font-size: 4em;
+    }
+    50% {
+        font-size: 5em;
+    }
+    100% {
+        font-size: 4em;
+    }
+}
+
+.text_effect5 {
+    font-size: 5rem;
+    text-align: center;
+    padding-top:8%;
+    padding-left: 15%;
+    color:#b3c118e4;
+    animation: zoomInOut2 1.5s infinite alternate;
+}
+
+.final_score{
+  align-items: center;
+  background-color: #d6d62c;
+  border: 2px solid #111;
+  border-radius: 8px;
+  box-sizing: border-box;
+  color: rgb(6, 6, 6);
+  cursor: pointer;
+  display: flex;
+  font-size: 1rem;
+  height: 48px;
+  justify-content: center;
+  line-height: 24px;
+  max-width: 100%;
+
+  position: relative;
+  text-align: center;
+  text-decoration: none;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.final_score:after {
+  background-color: #91d816;
+  border-radius: 8px;
+  content: "";
+  display: block;
+  height: 48px;
+  left: 0;
+  width: 100%;
+  position: absolute;
+  top: -2px;
+  transform: translate(8px, 8px);
+  transition: transform .2s ease-out;
+  z-index: -1;
+}
+
+.final_score:hover:after {
+  transform: translate(0, 0);
+}
+
+.final_score:active {
+  background-color: #ffdeda;
+  outline: 0;
+}
+
+.final_score:hover {
+  outline: 0;
+}
+
+
+@media only screen and (max-width: 480px) { 
+  #popup_treasure_content{
+    background-image: url("assets/empty_treasure_box.jpg");
+  }
+  .treasure_content{
+    flex-direction: column;
+    padding-left: 27%;
+    padding-top: 30%;
+   
+}
+
+.treasure-box1{
+    height:200px;
+    width:200px;
+  }
+
+  .treasure-box2{
+    height:200px;
+    width:200px;
+  }
+
+  @keyframes zoomInOut {
+    0% {
+    font-size: 2em;
+    }
+    50% {
+        font-size: 3em;
+    }
+    100% {
+        font-size: 2em;
+    }
+}
+  .text_effect4 {
+    animation: zoomInOut 4s infinite alternate;
+}
+.try-again {
+  animation: none !important;
+  font-size: 1em;
+  text-align:right;
+  margin-top: 100%;
+}
+#popup_treasure_content .try-again {
+  animation: none !important;
+}
+
+@keyframes zoomInOut2 {
+  0% {
+  font-size: 1.5em;
+  }
+  50% {
+      font-size: 3em;
+  }
+  100% {
+      font-size: 1.5em;
+  }
+}
+.text_effect5 {
+  font-size: 2rem;
+  text-align: center;
+  padding-top:8%;
+  padding-left: 0px;
+  color:#b3c118e4;
+  animation: zoomInOut2 2s infinite alternate;
+}
+#popup_treasure_content1 .final_score {
+  animation: none !important;
+}
+
+}
+

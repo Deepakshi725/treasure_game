@@ -1,0 +1,175 @@
+*{
+    margin: 0;
+    font-family: 'Mighty-Souly';
+}
+@font-face {
+    font-family: 'Mighty-Souly';
+    src: url('fonts/MightySouly-lxggD.ttf') format('woff2');
+}
+
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    background-image: url("assets/points_earned.png");
+    background-size: 500px;
+}
+
+#score {
+    font-size: 24px;
+    margin-top: 20px;
+}
+#reset-btn {
+    margin: 12px;
+    height: 50px;
+    width: 120px;
+    border-radius: 10px;
+    background: #333;
+    justify-content: center;
+    align-items: center;
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #444,
+    inset -5px -5px 10px #222;
+    font-family: "Damion", cursive;
+    cursor: pointer;
+    border: none;
+    font-size: 16px;
+    color: rgb(161, 161, 161);
+    transition: 500ms;
+    margin-top: 5%;
+  }
+  
+  #reset-btn:hover {
+    box-shadow: -5px -5px 15px #444, 5px 5px 15px #222, inset 5px 5px 10px #222,
+      inset -5px -5px 10px #444;
+    color: #d6d6d6;
+    transition: 500ms;
+  } 
+.user_score{
+    width:500px;
+    height: 275px;
+    border-radius: 20px;    
+}
+.score-container{
+    display: flex;
+    justify-content: left;
+    padding-left: 20px;
+}
+
+:root {
+    --color-1: #442288;
+    --color-2: #6ca2ea;
+    --color-3: #b5d33d;
+    --color-4: #fed23f;
+    --color-5: #eb7d5b;
+    --angle: 40deg;
+  }
+
+  @keyframes flash {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    25%, 75% {
+      opacity: 0;
+    }
+  }
+  
+  
+  #scoreDisplay {
+    color: #fff;
+    margin-left: 30px; 
+    font-size: 6.5vw;
+    font-weight: 900;
+    line-height: 6vw;
+    font-weight: bold;
+    font-family: 'Mighty-Souly';
+        font-size: 5rem;
+
+    background: linear-gradient(
+        var(--angle),
+        var(--color-1) 19%,
+        transparent 19%,
+        transparent 20%,
+        var(--color-2) 20%,
+        var(--color-2) 39%,
+        transparent 39%,
+        transparent 40%,
+        var(--color-3) 40%,
+        var(--color-3) 59%,
+        transparent 59%,
+        transparent 60%,
+        var(--color-4) 60%,
+        var(--color-4) 79%,
+        transparent 79%,
+        transparent 80%,
+        var(--color-5) 80%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;  
+    animation: flash 3s infinite;
+  }
+
+  @media only screen and (max-width: 480px) { 
+    body{
+        background-size: 200px;
+    }
+    .user_score{
+        display: none;   
+    }
+    :root {
+        --color-1: #785cb0;
+        --color-2: #8ab3e9;
+        --color-3: #dff48e;
+        --color-4: #ead48d;
+        --color-5: #f2997d;
+        --angle: 0deg;
+      }
+   
+      #scoreDisplay{
+        color: #fff;
+        margin-left: 4px; 
+        font-size: 9.5vh;
+        font-weight: 900;
+        line-height: 10vh;
+        word-spacing: 200vw;
+        padding-top: 10%;
+        background: linear-gradient(
+          var(--angle),
+          var(--color-1) 19%,
+          transparent 19%,
+          transparent 20%,
+          var(--color-2) 20%,
+          var(--color-2) 39%,
+          transparent 39%,
+          transparent 40%,
+          var(--color-3) 40%,
+          var(--color-3) 59%,
+          transparent 59%,
+          transparent 60%,
+          var(--color-4) 60%,
+          var(--color-4) 79%,
+          transparent 79%,
+          transparent 80%,
+          var(--color-5) 80%
+        );
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent; 
+        animation: 2s rotate linear infinite, flash 3s infinite;
+      }
+
+      @keyframes rotate {
+        to {
+          --angle: 360deg;
+        }
+      }
+      
+      @property --angle {
+        syntax: "<angle>";
+        initial-value: 0deg;
+        inherits: false;
+      }
+    
+      #reset-btn{
+        margin-top: 20%;
+      }
+    }
